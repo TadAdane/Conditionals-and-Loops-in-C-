@@ -75,8 +75,21 @@ void Exercise2(){
 void Exercise3(){
 
     //Declare integers
+    int intmin = 1, intmax = 1;
     int a, b, c;
-    cout << "Please enter a number to get it's factorial " << endl;
+
+    //Determine the factorial limit for int
+    do {
+        intmax++;
+        intmin *= intmax;
+        if (intmin == 0){
+        }
+    }while (intmin);
+
+    //Enter values between 0 and int limit
+    cout << "Since the factorial limit for int is " << intmax <<  endl;
+    cout << "Please enter values between 0 and " << intmax << endl;
+
     cin >> a;
 
     //Code for 0!
@@ -86,6 +99,9 @@ void Exercise3(){
         //Code for negative numbers factorial
         }else if (a < 0){
         cout << "Negative numbers don't have a factorial" << endl;
+        }else if (a >= 34){
+        cout << "The value limit for int is " << intmax << endl;
+        return;
         }
 
     /*loop, input number is multiplied to an integer less than 1 until zero is reached*/
