@@ -116,7 +116,9 @@ void Exercise3(){
 //Main function for calling up functions of Excercises
 int main()
 {
-    int Exercise, x;
+    char Exercise, intx;
+    char x;
+
     do
         {
     cout << "Choose an option:" << endl;
@@ -125,16 +127,19 @@ int main()
     cout << "Press 3 for Exercise 3" << endl;
     cout << "Press x for Exit" << endl;
     cin >> Exercise;
-    if (Exercise == 1){
+
+    if (Exercise == '1'){
             Exercise1();
-    } else if (Exercise == 2){
+    } else if (Exercise == '2'){
         Exercise2();
-    } else if (Exercise == 3){
+    } else if (Exercise == '3'){
         Exercise3();
-    } else if (Exercise == x){
+    } else if (Exercise == 'x'){
         break;
+    } else {
+        cout << "Invalid option" << endl;
     }
-    }while (Exercise < 4);
+    }while (Exercise);
 
     return 0;
 }
